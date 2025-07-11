@@ -1,0 +1,29 @@
+# Python bytecode / cache
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+.venv/
+env/
+venv/
+
+# Environment variables
+.env
+
+# Trained model file
+trained_model.pkl
+
+# Sample resumes (optional)
+sample_resumes/
+*.pdf
+
+# Streamlit files
+.streamlit/
+logs/
+
+# VS Code settings
+.vscode/
+
+# System files
+.DS_Store
+Thumbs.db
