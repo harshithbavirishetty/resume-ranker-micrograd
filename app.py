@@ -64,19 +64,27 @@ st.markdown(
         background-color: #1565c0;
     }
 
+    /* Table styling */
     .stTable {
         background-color: #ffffff;
         border-radius: 10px;
+        border: 2px solid #000000;  
         padding: 10px;
-        color: #212121;
         font-size: 15px;
         box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.05);
+        color: #000000 !important;
+    }
+
+    .stTable table, .stTable th, .stTable td {
+        color: #000000 !important;
+        border: 1px solid #cfd8dc;
     }
 
     </style>
     """,
     unsafe_allow_html=True
 )
+
 
 
 # Load trained model
