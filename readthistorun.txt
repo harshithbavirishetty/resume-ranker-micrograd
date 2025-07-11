@@ -1,0 +1,24 @@
+Read this to run the resumeranker
+
+to run first -->.venv\Scripts\Activate
+then -->streamlit run app.py
+now you will see browser with streamlit
+
+sample jd to test
+    Position: Cybersecurity Analyst
+    We are looking for a passionate and detail-oriented Cybersecurity Analyst to help secure our IT infrastructure and data systems. The ideal candidate should have hands-on experience with network security, incident response, and vulnerability assessment tools.
+    Responsibilities:
+    Monitor security alerts and respond to incidents in real time
+    Conduct vulnerability scans and penetration tests using tools like Nessus, Metasploit, or Burp Suite
+    Analyze logs and detect potential threats using SIEM tools such as Splunk or IBM QRadar
+    Implement firewalls, intrusion detection systems (IDS), and antivirus solutions
+    Stay updated on the latest threats and security news
+    Requirements:
+    Bachelor's degree in Computer Science, Information Security, or a related field
+    Understanding of network protocols (TCP/IP, DNS, HTTP, etc.)
+    Familiarity with operating systems (Windows, Linux) and cloud platforms (AWS, Azure)
+    Certifications like CEH, CompTIA Security+, or CISSP are a plus
+    Strong problem-solving and analytical skills
+    Excellent communication and documentation abilities
+
+best2 is cybersecurity related resume
