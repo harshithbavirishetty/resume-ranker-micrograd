@@ -6,7 +6,7 @@ import pickle
 from PyPDF2 import PdfReader
 from utils import vectorize, build_vocab, tokenize
 import numpy as np
-import pandas as pd 
+import pandas as pd
 
 st.markdown(
     """
@@ -14,7 +14,7 @@ st.markdown(
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
     .stApp {
-        background: linear-gradient(to right, #78909C, #B0BEC5);
+        background: linear-gradient(to bottom right, #B2DFDB, #FCE4EC); /* Very Pale Orange to Soft Peach */
         font-family: 'Poppins', sans-serif;
         color: #212121;
     }
@@ -68,7 +68,7 @@ st.markdown(
     .stTable {
         background-color: #ffffff;
         border-radius: 10px;
-        border: 2px solid #000000;  
+        border: 2px solid #000000;
         padding: 10px;
         font-size: 15px;
         box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.05);
@@ -80,6 +80,31 @@ st.markdown(
         border: 1px solid #cfd8dc;
     }
 
+    /* Fix pagination text & arrow color in file uploader */
+    .stFileUploader div[aria-live="polite"] {
+        color: #000000 !important;
+        font-weight: 500;
+        font-size: 14px;
+        margin-top: 8px;
+    }
+
+    .stFileUploader svg {
+        fill: #000000 !important;
+    }
+
+    /* Style for the pagination "Showing page 1 of X" */
+    .st-emotion-cache-c8ta4l.ejh2rmr0 {
+        background-color: #000000 !important;
+        color: #ffffff !important;
+        font-weight: 500;
+        font-size: 14px;
+        padding: 6px 12px;
+        border-radius: 8px;
+        margin-top: 10px;
+        display: inline-block;
+    }
+
+    
     </style>
     """,
     unsafe_allow_html=True
@@ -121,12 +146,8 @@ if st.button("Rank Resumes") and jd_text and uploaded_files:
     # Sort by score descending
     results.sort(key=lambda x: x[1], reverse=True)
 
-    #st.subheader("🧠 Match Scores")
-    #for filename, score in results:
-    #   st.write(f"📄 {filename}: **{score:.2f}** match")
-
     df = pd.DataFrame(results, columns=["Resume File", "Match Score"])
     df["Match Score"] = df["Match Score"].apply(lambda x: f"{x:.2f}")
-    
+
     st.subheader("📊 Ranked Results")
     st.table(df)

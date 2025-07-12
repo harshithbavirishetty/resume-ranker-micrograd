@@ -10,9 +10,6 @@ venv/
 # Environment variables
 .env
 
-# Trained model file
-trained_model.pkl
-
 # Sample resumes (optional)
 sample_resumes/
 *.pdf

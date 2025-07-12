@@ -9,12 +9,34 @@ import pickle
 
 # Dummy training data
 data = [
+    # Good Matches
     ("python developer", "python django flask", 1.0),
     ("data analyst", "excel sql tableau", 1.0),
-    ("frontend developer", "photoshop illustrator", 0.0),
     ("backend engineer", "nodejs express mongodb", 1.0),
-    ("java dev", "photoshop sketch", 0.0),
+    ("frontend developer", "html css javascript react", 1.0),
+    ("cybersecurity analyst", "network security ethical hacking kali linux", 1.0),
+    ("machine learning engineer", "python numpy pandas sklearn", 1.0),
+    ("devops engineer", "aws docker kubernetes jenkins", 1.0),
+
+    # Bad Matches
+    ("frontend developer", "illustrator photoshop", 0.0),
+    ("java developer", "photoshop figma", 0.0),
+    ("data analyst", "bootstrap javascript", 0.0),
+    ("cybersecurity analyst", "react html", 0.0),
+    ("backend engineer", "corel draw photoshop", 0.0),
+
+    # Partial Matches
+    ("data analyst", "excel python", 0.6),
+    ("backend engineer", "nodejs sql", 0.7),
+    ("python developer", "python numpy", 0.5),
+    ("devops engineer", "docker bash shell", 0.6),
+    ("cybersecurity analyst", "linux wireshark", 0.7),
+    ("frontend developer", "html css", 0.5),
+    ("machine learning engineer", "tensorflow keras", 0.8),
+    ("java developer", "java springboot", 1.0),
+    ("java developer", "c++ python", 0.3),
 ]
+
 
 # Build vocab
 all_text = [jd for jd, _, _ in data] + [res for _, res, _ in data]
